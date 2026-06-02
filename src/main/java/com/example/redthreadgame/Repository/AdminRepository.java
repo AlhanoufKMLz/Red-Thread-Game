@@ -9,6 +9,7 @@ import java.util.Optional;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin, Integer> {
     Admin findAdminById(Integer id);
+   //for more validation
     Admin findAdminByEmail(String email);
     Admin findAdminByUsername(String username);
 }

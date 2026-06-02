@@ -33,6 +33,6 @@ public class Admin {
     private String password;
 
     //  OneToMany
-    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
-    private List<Case> cases;
+    //@OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+   // private List<Case> cases;
 }

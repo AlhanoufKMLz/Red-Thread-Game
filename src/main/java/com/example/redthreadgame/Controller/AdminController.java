@@ -2,6 +2,7 @@ package com.example.redthreadgame.Controller;
 
 
 import com.example.redthreadgame.Api.ApiResponse;
+import com.example.redthreadgame.DTO.IN.AdminIn;
 import com.example.redthreadgame.Service.AdminService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +28,7 @@ public class AdminController {
     }
 
     @PutMapping("update/{id}")
-    public ResponseEntity<?> updateAdmin(@PathVariable Integer id, @RequestBody @Valid AdminDTOIN dto) {
+    public ResponseEntity<?> updateAdmin(@PathVariable Integer id, @RequestBody @Valid AdminIn dto) {
         adminService.updateAdmin(id, dto);
         return ResponseEntity.ok(new ApiResponse("Admin updated successfully"));
     }
